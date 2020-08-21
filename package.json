@@ -1,0 +1,35 @@
+{
+  "name": "whaskript",
+  "version": "1.0.0",
+  "description": "eslint\\stylelint code style",
+  "bin": "./lib/lint.js",
+  "main": "./lib/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src --out-dir lib --watch && cp -r src/template lib",
+    "test": "jest"
+  },
+  "jest": {
+    "testMatch": [
+      "**/*.test.js"
+    ]
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "dependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@umijs/fabric": "^2.2.2",
+    "commander": "^6.0.0",
+    "cosmiconfig": "^7.0.0",
+    "eslint": "^7.7.0",
+    "glob": "^7.1.6",
+    "jest": "^26.4.1",
+    "lint-staged": "^10.2.11",
+    "shelljs": "^0.8.4"
+  }
+}
